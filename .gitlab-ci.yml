@@ -1,0 +1,18 @@
+stages:
+  - test
+
+variables:
+  SAUCE_USERNAME: "SAUCE_USERNAME"
+  SAUCE_ACCESS_KEY: "SAUCE_ACCESS_KEY"
+  TEST_PLATFORM: "android"
+  MARKER: "e2e_tests"
+
+sauce_tests:
+  stage: test
+  image: python:3.10
+  before_script:
+    - pip install -r requirements.txt
+  script:
+    - python tests/runner.py --platform $TEST_PLATFORM --marker "$MARKER"
+  only:
+    - main

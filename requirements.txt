@@ -1,0 +1,12 @@
+Appium-Python-Client~=4.5.0
+selenium~=4.28.1
+webdriver-manager
+pytest~=8.3.4
+pytest-xdist
+allure-pytest
+flaky
+requests~=2.32.3
+pytest-html
+pytest-cov
+numpy~=2.2.2
+Pillow
